@@ -22,7 +22,7 @@ go get github.com/redis/go-redis/v9
 ```
 ***
 ## 架构
-<img src="assets/framework.png">
+<img src="assets/framework.png" width=80%>
 
 ***
 ## 联系
