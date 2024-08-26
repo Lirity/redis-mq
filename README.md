@@ -1,10 +1,9 @@
-go get github.com/redis/go-redis/v9
-
-基于Redis Stream + go-redis实现的消息队列
-
-1.redis包基于go-redis提供了redis连接 封装了XADD XREADGROUP XACK方法
-2.redis_mq包封装了consumer和producer
-
+# redis-mq
+***
+redis-mq是基于redis5.0新加入的数据结构stream实现的消息队列
++ 基于go-redis封装了redis客户端，以及XADD、XREADGROUP和XACK方法
++ 实现了producer和consumer基于消息队列的消息传递架构
+***
 1.创建Topic
 ```
 localhost:6379> XADD topic * key val
@@ -14,4 +13,8 @@ localhost:6379> XADD topic * key val
 ```
 localhost:6379> XGROUP CREATE topic group 0-0
 "OK"
+```
+3.安装go-redis
+```
+go get github.com/redis/go-redis/v9
 ```
